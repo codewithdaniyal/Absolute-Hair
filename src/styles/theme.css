@@ -1,0 +1,135 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Absolute Hair Brand Colors */
+  --brand-black: #0D0D0D;
+  --brand-white: #FFFFFF;
+  --brand-ghost: rgba(255, 255, 255, 0.08);
+  --brand-ghost-hover: rgba(255, 255, 255, 0.12);
+  --brand-border: rgba(255, 255, 255, 0.1);
+  --brand-border-hover: rgba(255, 255, 255, 0.3);
+  --brand-muted: rgba(255, 255, 255, 0.45);
+  --brand-card-bg: rgba(255, 255, 255, 0.04);
+
+  /* Override defaults with brand colors */
+  --font-size: 16px;
+  --background: var(--brand-black);
+  --foreground: var(--brand-white);
+  --card: var(--brand-card-bg);
+  --card-foreground: var(--brand-white);
+  --popover: var(--brand-black);
+  --popover-foreground: var(--brand-white);
+  --primary: var(--brand-white);
+  --primary-foreground: var(--brand-black);
+  --secondary: var(--brand-ghost);
+  --secondary-foreground: var(--brand-white);
+  --muted: var(--brand-ghost);
+  --muted-foreground: var(--brand-muted);
+  --accent: var(--brand-ghost-hover);
+  --accent-foreground: var(--brand-white);
+  --destructive: #d4183d;
+  --destructive-foreground: var(--brand-white);
+  --border: var(--brand-border);
+  --input: transparent;
+  --input-background: transparent;
+  --switch-background: var(--brand-ghost);
+  --font-weight-medium: 400;
+  --font-weight-normal: 300;
+  --ring: var(--brand-border-hover);
+  --radius: 4px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
+  
+  /* Brand-specific utilities */
+  --color-brand-black: var(--brand-black);
+  --color-brand-white: var(--brand-white);
+  --color-brand-ghost: var(--brand-ghost);
+  --color-brand-border: var(--brand-border);
+  --color-brand-muted: var(--brand-muted);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 300;
+  }
+
+  html {
+    font-size: var(--font-size);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 200;
+    line-height: 1.3;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  button {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  input, textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+}
