@@ -37,7 +37,7 @@ export function HomePage() {
   const avgStaff = reviews.reduce((sum, r) => sum + r.staffRating, 0) / reviews.length;
 
   return (
-    <div className= "min-h-screen pt-24 bg-[#0D0D0D]" >
+    <div className= "min-h-screen pt-14 bg-[#0D0D0D]" >
     {/* Hero Header */ }
     < section className = "relative h-[60vh] md:h-[70vh] overflow-hidden" >
       <img
